@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  go:
+    image: 'golang:${GO_IMAGE_TAG:-alpine}'
+    working_dir: /go/src/app
+    volumes:
+      - .:/go/src/app
+    entrypoint: go
